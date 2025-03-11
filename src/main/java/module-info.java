@@ -7,7 +7,8 @@ module com.example.markdocfx {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
-    opens com.example.markdocfx to javafx.fxml;
-    exports com.example.markdocfx;
+    opens io.github.tobyFm.markdocfx to javafx.fxml;
+    exports io.github.tobyFm.markdocfx;
 }

@@ -1,0 +1,20 @@
+.body {
+    -fx-background-color: #181818;
+}
+
+.mfx-button {
+    -fx-text-fill: rgba(0, 0, 0, 0.87);
+}
+
+.outline-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #7a0ed9;
+    -fx-border-radius: 10;
+    -fx-text-fill: #7a0ed9;
+}
+
+.outline-button:hover {
+    -fx-border-radius: 50;
+    -fx-background-color: #7a0ed9;
+    -fx-text-fill: white;
+}
