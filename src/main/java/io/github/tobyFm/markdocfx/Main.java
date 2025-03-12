@@ -12,7 +12,7 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("elements.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("app.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("bootstrapfx.css")).toExternalForm());
@@ -25,7 +25,9 @@ public class Main extends Application {
 
         stage.getIcons().add(appIcon);
         stage.setTitle("MarkDocFX");
-        stage.resizableProperty().setValue(Boolean.FALSE);
+        stage.setMinWidth(600);
+        stage.setMinHeight(800);
+        stage.resizableProperty().setValue(Boolean.TRUE);
         stage.setScene(scene);
         stage.show();
     }
