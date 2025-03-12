@@ -45,7 +45,7 @@
             <!-- Left-Sektion mit TreeView -->
             <VBox prefWidth="234.0" style="-fx-background-color: #333;">
                 <HBox>
-                    <MFXButton fx:id="openFile" text="Open File"></MFXButton>
+                    <MFXButton fx:id="openFile" text="Open File" onAction="#openFile"></MFXButton>
                     <MFXButton fx:id="openFolder" text="Open Folder"></MFXButton>
                     <MFXButton fx:id="closeAll" text="Alles Schließen"></MFXButton>
                 </HBox>
