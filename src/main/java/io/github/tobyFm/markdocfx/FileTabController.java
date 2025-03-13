@@ -25,6 +25,11 @@ public class FileTabController {
 
     private String FilePath;
 
+    // -------------------------------------------
+    // Setzt den FilePath von der ausgewählten Datei
+    // und übergibt sie, damit die Datei bzw. der Inhalt
+    // ermittelt werden kann.
+    // -------------------------------------------
     public void setFilePath(String filePath) {
         this.FilePath = filePath;
         loadFileContent(filePath);
@@ -34,10 +39,12 @@ public class FileTabController {
         File file = new File(filePath);
         StringBuilder content = new StringBuilder();
 
+        // ließt Datei
         try (Scanner scanner = new Scanner(file)) {
             while (scanner.hasNextLine()) {
                 content.append(scanner.nextLine()).append("\n");
             }
+            // Setzt Inhalt
             markdownInput.setText(content.toString());
         }  catch (FileNotFoundException e) {
             e.printStackTrace();
